@@ -19,17 +19,7 @@ const burgerRoutes = require('./controllers/burgers_controller.js')
 
 app.use(burgerRoutes);
 
-
-
-
-
-
-
-
-
-
-
-
 app.listen(PORT, function() {
-    console.log("App now listening at localhost:" + PORT);
+    // Log (server-side) when our server has started
+    console.log("Server listening on: http://localhost:" + PORT);
   });

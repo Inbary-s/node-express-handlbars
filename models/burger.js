@@ -5,7 +5,7 @@ const burger = {
     getAll: function(cb){
         orm.selectAll(function(res){
             cb(res)
-        })
+        });
     },
     insertOne: function(data, cb){
         orm.insertOne(data, function(res){

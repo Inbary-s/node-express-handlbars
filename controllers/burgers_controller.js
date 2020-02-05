@@ -1,26 +1,27 @@
 const express = require('express');
-const burger = require('../models/burger');
-const Router = express.Router();
+const burger = require('../models/burger.js');
+const router = express.Router();
 
 
-Router.get('/', function(req,res){
-burger.getAll(function(data){
-res.render('index', {burgers:data})
-})
-})
+router.get('/', function(req,res){
+    burger.getAll(function(data){
+    res.render('index', {burgers:data});
+    });
+});
 
-Router.post('/', function(req,res){
-burger.insertOne(req.body, function(data){
-    console.log(data)
-    res.redirect('/')
-})
-})
+router.post('/api/burgers', function(req,res){
+    burger.insertOne(req.body.name, function(data){
+        res.json({ id: result.insertId });
+        console.log(data);
+        res.redirect('/');
+    });
+});
 
-Router.put('/:id', function(res, req){
+// Router.put('/:id', function(res, req){
 
-})
+// })
 
-module.exports = Router
+module.exports = router
 
 // 4. Create the `router` for the app, 
 // and export the `router` at the end of your file.
