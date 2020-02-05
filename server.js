@@ -1,6 +1,4 @@
-const mysql = require('mysql');
 const express = require('express');
-const handlebars = require('express-handlebars');
 const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(express.static("public"));

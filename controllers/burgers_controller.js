@@ -17,11 +17,12 @@ router.post('/api/burgers', function(req,res){
     });
 });
 
-// Router.put('/:id', function(res, req){
-
-// })
+Router.put('/api/burgers/:id', function(res, req){
+    burger.update({devoured: req.body.devoured}, req.params.id, function(res){
+        if (res.changedRows == 0){
+            return res.status(404).end();
+        }
+    })
+})
 
 module.exports = router
-
-// 4. Create the `router` for the app, 
-// and export the `router` at the end of your file.
