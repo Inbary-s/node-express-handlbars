@@ -12,8 +12,8 @@ const burger = {
             cb(res)
         })
     },
-    update: function(cb){
-        orm.updateOne(function(res){
+    update: function(condition, cb){
+        orm.updateOne(condition, function(res){
             cb(res)
         })
     }
