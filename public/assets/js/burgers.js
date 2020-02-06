@@ -5,7 +5,7 @@ $(function () {
           name: $("#ca").val().trim()
         };
         // Send the POST request.
-        $.ajax("/api/", {
+        $.ajax("/api/burgers", {
           type: "POST",
           data: newBurger
         }).then(
@@ -24,7 +24,7 @@ $(function () {
       };
   
       // Send the PUT request.
-      $.ajax("/api/" + id, {
+      $.ajax("/api/burgers" + id, {
         type: "PUT",
         data: newDevouredState
       }).then(
