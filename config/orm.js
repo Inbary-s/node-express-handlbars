@@ -20,9 +20,9 @@ const orm = {
         })
     },
     updateOne: (id, cb) => {
-        connection.query(`UPDATE burgers SET devoured = TRUE WHERE id = ${id}`, function(err, data) {
+        connection.query(`UPDATE burgers SET devoured = TRUE WHERE id = ${id}`, function(err, res) {
             if (err)throw err;
-            cb(data);
+            cb(res);
         })
     }
 

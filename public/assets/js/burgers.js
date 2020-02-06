@@ -17,19 +17,21 @@ $(function () {
         );
       });    
     $(".change-devour").on("click", function (event) {
+      event.preventDefault();
       var id = $(this).data("id");
-      var newDevroured = $(this).data("devoured");
+      var newDevoured = $(this).data("devoured");
+      console.log(id);
+      console.log(newDevoured);
       var newDevouredState = {
-        devoured: newDevroured
+        devoured: newDevoured
       };
   
       // Send the PUT request.
-      $.ajax("/api/burgers" + id, {
+      $.ajax("/api/burgers/" + id, {
         type: "PUT",
         data: newDevouredState
-      }).then(
-        function () {
-          console.log("changed to devoured", newDevroured);
+      }).then(function () {
+          console.log("changed to devoured to ", newDevoured);
           // Reload the page to get the updated list
           location.reload();
         }
