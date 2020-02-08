@@ -17,7 +17,7 @@ router.post('/api/burgers', function(req,res){
 router.put('/api/burgers/:id', function(req,res){
     burger.update(req.params.id, function(data){
         if (data.changedRows == 0){
-            return res.status(404).end();
+            return res.status(404);
         }
     });
 });
