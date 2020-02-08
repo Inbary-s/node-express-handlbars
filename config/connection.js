@@ -11,9 +11,6 @@ if(process.env.JAWSDB_URL){
     database: "burgers_DB"
   });
 
-  connection.connect(function(err) {
-    if (err) throw err;
-    console.log("connected as id " + connection.threadId + "\n");
-  });
+  connection.connect();
 
   module.exports = connection;
