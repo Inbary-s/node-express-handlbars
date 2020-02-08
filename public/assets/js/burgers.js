@@ -8,12 +8,11 @@ $(function () {
     $.ajax("/api/burgers", {
       type: "POST",
       data: newBurger
-    }).then(
-      function () {
-        console.log("created new burger");
-        // Reload the page to get the updated list
-        location.reload();
-      });
+    }).then(function () {
+      console.log("created new burger");
+      // Reload the page to get the updated list
+      location.reload();
+    });
   });    
 });
 $(function () {  
@@ -21,8 +20,6 @@ $(function () {
     event.preventDefault();
     var id = $(this).data("id");
     var newDevoured = $(this).data("devoured");
-    console.log(id);
-    console.log(newDevoured);
     var newDevouredState = {
       devoured: newDevoured
     };
@@ -31,9 +28,9 @@ $(function () {
       type: "PUT",
       data: newDevouredState
     }).then(function () {
-        console.log("changed to devoured to ", newDevoured);
+      console.log("changed to devoured to ", newDevoured);
         // Reload the page to get the updated list
-        location.reload();
-      });
+      location.reload();
+    });
   });
 });

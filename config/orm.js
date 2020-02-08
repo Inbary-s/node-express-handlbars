@@ -10,7 +10,6 @@ const orm = {
         })
     },
     insertOne: (newBurger, cb) => {
-        console.log("newBurger",newBurger);///
         connection.query(`INSERT INTO burgers (name) VALUES ('${newBurger}')`, function(err, data) {
             if (err) throw err;
             cb(data);

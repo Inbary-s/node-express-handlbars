@@ -1,0 +1,44 @@
+body {
+    padding: 5%;
+    font-family: 'Questrial', sans-serif;
+    background-color: black;
+    background-image: url("../img/burger.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: 100%; 
+    color: white;
+    margin: auto;
+    font-size: larger;
+    top: 0;
+}
+ul {
+    list-style-type: none;
+}
+li {
+    padding: 6px;
+}
+.devoured{
+    position: relative;
+    float: right;
+    top: 0;
+}
+.form-group {
+    padding: 15px;
+    position: relative;
+}
+.btn {
+    padding: 6px;
+    margin-left: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(248, 248, 255, 0.486);
+    font-family: 'Questrial', sans-serif;
+    font-weight: bolder;
+}
+.btn:hover {
+    background-color: rgba(248, 248, 255, 0.733);
+}
+h1{
+    text-align: center;
+    padding-top: 65px;
+}
