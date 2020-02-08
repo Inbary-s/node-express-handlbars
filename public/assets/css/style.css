@@ -42,3 +42,9 @@ h1{
     text-align: center;
     padding-top: 65px;
 }
+input {
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    border: none;
+}
