@@ -14,8 +14,6 @@ $(function () {
       location.reload();
     });
   });    
-});
-$(function () {  
   $(".change-devour").on("click", function (event) {
     event.preventDefault();
     var id = $(this).data("id");
@@ -27,10 +25,8 @@ $(function () {
     $.ajax("/api/burgers/" + id, {
       type: "PUT",
       data: newDevouredState
-    }).then(function () {
-      console.log("changed to devoured to ", newDevoured);
-        // Reload the page to get the updated list
-      location.reload();
-    });
+    })
+    location.reload();
   });
 });
+ 
